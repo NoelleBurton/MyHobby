@@ -8,11 +8,14 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/MyHobby.styles.css" asp-append-version="true" />
 </head>
+
 <body>
     <header>
+        @*Navigation Bar*@
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><b>Pottery & Ceramics</b></a>
+                @*Webpage Icon*@
                 <img src="/img/hobbyIcon.png"height=40px style="padding-right:8px"/>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -37,14 +40,18 @@
         </main>
     </div>
 
+    @*Footer*@
     <footer class="border-top footer text-muted" style="background-color:white !important">
+        @*Information about me*@
         <div class="container" style="text-align:center">
             &copy; 2024 Noelle Burton - BYU IS Juinor Core Student - 414 Mission #5
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
