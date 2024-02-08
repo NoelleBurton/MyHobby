@@ -1,0 +1,56 @@
+html {
+    font-size: 14px;
+    font-family: 'Sans Serif Collection';
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+        font-family: 'Sans Serif Collection';
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+    font-family: 'Sans Serif Collection';
+}
+
+body {
+    background-image: url('/img/potterybackground.jpeg');
+    margin-bottom: 60px;
+    font-family: 'Sans Serif Collection';
+}
+
+.box {
+    width: calc(33.33% - 30px); /* Adjust the width of each box */
+    /* 20px is the total horizontal margin between boxes */
+    height: 480px; /* Adjust the height of the box */
+    background-color: rgba(240, 240, 240, 0.8); /* Background color with opacity */
+    border: 1px solid #ccc; /* Border around the box */
+    border-radius: 10px; /* Rounded corners for the box */
+    display: inline-block; /* Display boxes next to each other */
+    margin: 10px; /* Margin between boxes */
+    text-align: center; /* Center text inside the box */
+    padding: 30px; /* Padding inside the box */
+    overflow-y: auto; /* Enable vertical scrolling if needed */
+}
+
+.centered-box {
+    width: 800px; /* Adjust the width of the box */
+    height: 500px; /* Adjust the height of the box */
+    background-color: rgba(240, 240, 240, 0.8); /* Background color with opacity */
+    border: 1px solid #ccc; /* Border around the box */
+    border-radius: 10px; /* Rounded corners for the box */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding:40px;
+    align-content:center;
+    align-items:center;
+}

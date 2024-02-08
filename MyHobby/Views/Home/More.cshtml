@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Learn More";
+}
+
+<div class="centered-box" style="align-content:center; text-align:center">
+    <h2 style="font-size:35px"><b>Calculate the Cost</b></h2>
+    <p><b>Customize your training experience</b> by specifying the number of hours you'd like to invest.<br>
+        Our calculator will instantly generate the total cost based on <b>your preferences</b> and our hourly rate.
+    </p>
+
+    <form id="calculationForm">
+        <label for="input1" style="font-size:20px">How Many Hours?</label><br />
+        <input type="number" min="0" id="input1" name="input1" style="text-align:center" required>
+        <br><br>
+        <label for="input2" style="font-size:20px">My Hourly Rate:</label><br />
+        <input type="number" id="input2" name="input2" value=20.00 style="text-align:center" readonly>
+        <br><br /><br />
+        <button type="submit" style="background-color:#3D3D3D; color:white; padding:5px; width:277px">Calculate</button>
+        <br /><br /><br />
+    </form>
+
+    <div style="font-size:30px; font-weight:200;" id="result"></div>
+
+    @section Scripts {
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('#calculationForm').submit(function (event) {
+                    event.preventDefault(); // Prevent the default form submission
+
+                    // Get the values from the input fields
+                    var input1 = $('#input1').val();
+                    var input2 = $('#input2').val();
+
+                    // Perform the calculation
+                    var result = parseInt(input1) * parseInt(input2); // Example calculation (sum of inputs)
+
+                    // Display the result
+                    $('#result').text('Estimated Cost: $' + result);
+
+                });
+            });
+        </script>
+    }
+
+</div>
